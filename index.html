@@ -1,13 +1,287 @@
-<html lang="en">
+<!DOCTYPE html>
+<html ng-app="myApp" ng-csp>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proben</title>
+	<title>PORTFOLIO</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Зареждане на AngularJS -->
+
+	<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+	<!-- ngRoute -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+
+	
+	<!-- <script src="js/angular_min.js"></script> -->
+	<script src="js/app.js"></script>
+	
+	<!-- Включете вашите сценарии след AngularJS -->
+    <script src="js/header.js"></script>
+	<script src="./js/server.js"></script>
+
+	<!-- lokalen srver za fond -->
+	<!-- <script src="https://cors-anywhere.herokuapp.com/https://kit.fontawesome.com/a076d05399.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!--My Code-->
+	<link href="./style.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Proben</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, quae dolores maiores nemo laboriosam magnam quaerat assumenda ut laudantium fugiat aut explicabo aperiam, recusandae tempora quasi id ipsam. Officiis, tempore?</p>
+
+<div class="container">
+	<header class="header">
+		<div class="top-header-main icons-bar clearfix">
+
+			<div class="hidden-md-down">
+				<!-- MAL HEADER -->
+				<div class="hidden-md-down">
+					<div class="classic-header clearfix header-sticky">
+						<div class="bg-dark">
+							<div class="main icons-bar clearfix">
+								<div class="row_3 color-white">
+									<div class="col_3">
+										<i class="fa fa-map-marker info"></i> <i>Ohrid MK</i>
+									</div>
+									<div class="col_3">
+										<i class="fa fa-phone info"></i> <i>+389 78 334 750</i>
+									</div>
+									<div class="col_3">
+										<i class="fa fa-envelope info"></i> <i>pptarnovo1401@gmail.com</i>
+									</div>
+									<!-- <div class="col_4">
+										<i class="active"><a class="info" href="#">ENG</a></i>
+									</div>
+									<div class="col_4">
+										<i class="active"><a class="info" href="#">MK</a></i>
+									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- GOLEM HEADER -->
+			<div class="card text-bg-dark">
+				<!-- meni so sliki header -->
+
+				<div class="tabcontent" id="home">
+                    <img src="./img/heder_top.jpg" class="card-img" alt="header-image" height="600">
+                </div>
+				<div  class="tabcontent" id="logos">
+					<img  src="./img/logos.jpg"  class="card-img" id="img" alt="header-image" height="600">
+				</div>
+				<div class="tabcontent" id="logo_video">
+					<img src="./img/logo_videos.jpg"  class="card-img" id="img"  alt="header-image" height="600">
+				</div>
+				<div class="tabcontent" id="mockups" >
+					<img src="./img/mockups.jpg"  class="card-img" id="img"  alt="" height="600">
+				</div>
+				<div class="tabcontent" id="pictures" >
+					<img src="./img/pictures.top.jpg"  class="card-img" id="img"  alt="header-image" height="600">
+				</div>
+				<div class="tabcontent" id="videos">
+					<img src="./img/videos.jpg"   class="card-img" id="img"  alt="header-image" height="600">
+				</div>
+				<div class="tabcontent" id="mobiles">
+					<img src="./img/mobiles.jpg"  class="card-img" id="img"  alt="header-image" height="600">
+				</div>
+				<div class="tabcontent" id="web">
+					<img src="./img/web.jpg"  class="card-img" id="img"  alt="header-image" height="600">
+				</div>
+				<div class="tabcontent" id="about_me">
+					<img src="./img/about_me.jpg"  class="card-img" id="img"  alt="header-image" height="600">
+				</div>
+ 
+			            	<!--KRAJ meni so sliki header -->
+							<!-- menuvanje na sekoj heder razlicna slika -->
+				 <div class="card-img-overlay">
+					<div class="bg-dark bg-opacity-50 p-4">
+						<nav class="">
+							<ul class="row">
+
+								<div class="col">
+									<div class="classic-logo">
+										<img src="uploads/logo/so_pozadina/logo_3.png" style="width: 20%;" height="20%" alt="Graphic  Designer &amp;"></a>
+									</div>
+								</div>
+
+								<div class="col">
+                                    <i onclick="openPage('home', this, './img/heder_top.jpg')"
+                                        id="defaultOpen">
+                                        <a href="#!home"  class="tablink" ;>HOME</a></i>
+                                </div>
+								<div class="col">
+									<i onclick="openPage('logos', this,'./img/logos.jpg')">
+										<a href="#!logos"  class="tablink";
+											>Logos</a></i>
+							   </div>
+								<div class="col">
+									<i onclick="openPage('logo_video', this, './img/logo_videos.jpg')">
+										<a href="#!logo_video" class="tablink";
+											>Logo Video</a></i>
+								</div>
+								<div class="col">
+									<i onclick="openPage('mockups', this,'./img/mockups.jpg')"> 
+										<a href="#!mockups" class="tablink";
+											>Mockups</a></i>
+								</div>
+								<div class="col">
+									<i onclick="openPage('pictures', this, './img/pictures.top.jpg')">
+										<a href="#!pictures" class="tablink";
+											>Pictures</a></i>
+								</div>
+								<div class="col">
+									<i onclick="openPage('videos', this, './img/videos.jpg')">
+										<a href="#!videos" class="tablink";
+											>Videos</a></i>
+								</div>
+								<div class="col">
+									<i  onclick="openPage('mobiles', this, './img/mobiles.jpg')">
+										<a href="#!mobiles" class="tablink";
+											>Mobiles</a></i>
+								</div>
+								<div class="col">
+									<i  onclick="openPage('web', this, './img/web.jpg')">
+										<a href="#!web"  class="tablink";
+											>WEB</a></i>
+								</div>
+								<div class="col">
+									<i  onclick="openPage('about_me', this, './img/about_me.jpg')">
+										<a href="#!about_me"  class="tablink";
+											>About ME</a></i>
+								</div>
+							</ul>
+						</nav>
+						
+					</div>
+						<!-- kraj na heder sliki menuvanje -->
+					<!--spiner i LOGO  -->
+					<div class="text-center mt-5">
+						<div>
+							<div id="loader"></div>
+							<div id="loader1"></div>
+							<div id="imgLogo">
+								<img class="imlogo" src="uploads/logo/so_pozadina/logo_3.png" style="width: 10%" style="height: 10%"   alt="Graphic  Designer &amp;">
+							</div>
+						</div>
 
 
-</body>
+						<div style="display:none;" id="myDiv">
+							<div class="preloader"></div>
+							<!-- <img src="uploads/logo/so_pozadina/logo_3.png" alt="Graphic  Designer &amp;"> -->
+							<h1 class="naslov">*** GRAPHIC & DESIGN ***</h1>
+							<h3 class="naslov">Lake Ohrid</h3>
+						</div>
+					</div>
+					<!-- kraj spiner i logo -->
+				</div> 
+			</div>
+		</div>
+		</div>
+		<!--KRAJ HEADER -->
+	</header>
+
+	<div ng-view></div>
+
+	<!-- FOOTER -->
+
+	
+	    <!-- футър -->
+        <footer style="background-image:url(); position: relative;">
+			<div class="container">
+				<!-- изображение за футъра -->
+				<img src="img/footer1.jpg" width="100%" alt="">
+				<!-- изместете иконите и информацията в следния div -->
+				<div class="footer-info t_1 row text-center" style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0%);">
+					<div class="footer-info text-left col">
+						<p>Copyright © 2023 Unique Portfolio &amp; Web Development
+							<a href="http://pptarnovo1401@gmail.com">*PEPI Studio MK*</a>...
+						</p>
+					</div>
+					<div class="footer-info text-right col">
+						<ul class="social_icons">
+							<i>
+								<a href="#" title="Facebook">
+									<i class='fab fa-facebook-f' style='font-size:36px t_1'></i></a>
+							</i>
+							<i>
+								<a href="#" title="Twitter"><i class='fab fa-twitter' style='font-size:36px t_1'></i></a>
+							</i>
+							<i>
+								<a href="#" title="Instagram"><i class='fab fa-instagram' style='font-size:36px t_1'></i></a>
+							</i>
+						</ul>
+					</div>
+				</div>
+				<!-- край на изместването -->
+			</div>
+		</footer>
+<!-- kraj footer -->
+
+	<!-- VRTESTO LOGO script -->
+
+	<script>
+		var myVar;
+
+		function myFunction() {
+			myVar = setTimeout(showPage, 10000);
+		}
+
+		function showPage() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("loader1").style.display = "none";
+			document.getElementById("imgLogo").style.display = "none";
+			document.getElementById("myDiv").style.display = "block";
+		}
+	</script>
+
+	<!-- KRAJ VRTESTO LOGO script -->
+     <!-- header script -->
+	<script>
+        // Обект със снимки за различните страници
+        function openPage(pageName, elmnt, headerImage) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName('tabcontent');
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = ""; // Променете стила на фона
+            }
+
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = "#ccc"; // Променете цвета на фона
+            document.querySelector('.header').style.backgroundImage = 'url(' + headerImage + ')';
+        }
+
+        // Извикайте функцията за смяна на изображението според текущата страница
+       
+		document.getElementById("defaultOpen").click();
+    </script>
+
+
+</div>
+
+	
+</body>  <!-- Преместете този скрипт след затварящия таг на body или използвайте DOMContentLoaded  Този скрипт използва събитието DOMContentLoaded, което се задейства, когато целият HTML документ е бил зареден и готов за манипулация с JavaScript.-->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        myFunction();
+    });
+</script>
+
+
 </html>
+
