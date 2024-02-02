@@ -1,21 +1,34 @@
 document.addEventListener("DOMContentLoaded", function() {
     myFunction();
 });
+// var app = angular.module('myApp', ['ngRoute']);
+
+// // Дефинирайте функцията myScrollFunction преди да я използвате
+// function myScrollFunction() {
+//     // Вземете текущата позиция на превъртане на прозореца
+//     var scrollPosition = window.scrollY;
+
+//     // Пример: Ако превъртате повече от 200 пиксела, променете цвета на фона
+//     if (scrollPosition > 100) {
+//         document.body.style.backgroundColor = 'lightgray';
+//     } else {
+//         document.body.style.backgroundColor = 'white';
+//     }
+
+//     // Можете да добавите друга логика тук в зависимост от вашите изисквания
+// }
+// Дефиниране на AngularJS модула
 var app = angular.module('myApp', ['ngRoute']);
 
-// Дефинирайте функцията myScrollFunction преди да я използвате
+// Дефиниране на функцията за промяна на цвета при превъртане
 function myScrollFunction() {
-    // Вземете текущата позиция на превъртане на прозореца
     var scrollPosition = window.scrollY;
 
-    // Пример: Ако превъртате повече от 200 пиксела, променете цвета на фона
     if (scrollPosition > 100) {
         document.body.style.backgroundColor = 'lightgray';
     } else {
         document.body.style.backgroundColor = 'white';
     }
-
-    // Можете да добавите друга логика тук в зависимост от вашите изисквания
 }
 
 // Добавете следната линия там, където имате нужда от слушателя на събития за превъртане.
